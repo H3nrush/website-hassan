@@ -63,11 +63,11 @@ function Header() {
               <div className="dropdown">
                 <button className="skills-button">Skills</button>
                 <div className="dropdown-menu">
-                  <button>Python</button>
-                  <button>TypeScript</button>
-                  <button>React</button>
-                  <button>ExpressJs</button>
-                  <button>Sass</button>
+                  <a href="#python"><button>Python</button></a>
+                  <a href="#typescript"><button>TypeScript</button></a>
+                  <a href="#react"><button>React</button></a>
+                  <a href="#express"><button>ExpressJs</button></a>
+                  <a href="#sass"><button>Sass</button></a>
                 </div>
               </div>
             )}

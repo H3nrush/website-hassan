@@ -58,6 +58,7 @@
   .dropdown-menu {
     display: none;
     position: absolute;
+    top: 37px;
     border-radius: 10px;
     padding: 10px;
     z-index: 10;
@@ -86,6 +87,7 @@
 
 /* Mobile Styles */
 @media (max-width: 900px) {
+  
   /* Hide desktop menu */
   .menubar {
     display: none;
