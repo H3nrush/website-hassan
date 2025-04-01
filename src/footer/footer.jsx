@@ -25,9 +25,9 @@ function Footer() {
         <div className="footer-social">
           <h3>Contact me:</h3>
           <div className="social-icons">
-              <Link><img src={outlook} alt="Outlook" className='social-img'/></Link>
-              <Link><img src={gmail} alt="Gmail" className='social-img'/></Link>
-              <Link><img src={linkedin} alt="Linkedin" className='social-img'/></Link>
+              <Link to={"mailto:Hassanmohammadi078@hotmail.com"}><img src={outlook} alt="Outlook" className='social-img'/></Link>
+              <Link to={"mailto:Hassanmohammadi078@gmail.com"}><img src={gmail} alt="Gmail" className='social-img'/></Link>
+              <Link to={"https://linkedin.com/in/h3nrush"}><img src={linkedin} alt="Linkedin" className='social-img'/></Link>
           </div>
         </div>
       </div>

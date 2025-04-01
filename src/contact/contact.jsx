@@ -4,7 +4,6 @@ import Footer from '../footer/footer'
 import  './contact.scss'
 import telegram from '../file/contact/icons8-telegram-96.png'
 import youtube from '../file/contact/icons8-youtube-96.png'
-import twitch from '../file/contact/icons8-twitch-96.png'
 import instagram from '../file/contact/icons8-instagram-96.png'
 import discord from '../file/contact/icons8-discord-96.png'
 import facebook from '../file/contact/icons8-facebook-96.png'
@@ -21,12 +20,11 @@ function Contact() {
         <address className='Address'>12 quai du senegal , apt 003 , 33300 Bordeaux</address>
         <p className='i-social'>also take a look to my social media profiles :</p>
         <div id='social-links'>
-            <Link><img src={telegram} alt="" className='social-img' /></Link>
-            <Link><img src={youtube} alt="" className='social-img' /></Link>
-            <Link><img src={twitch} alt="" className='social-img' /></Link>
-            <Link><img src={instagram} alt="" className='social-img' /></Link>
-            <Link><img src={discord} alt="" className='social-img' /></Link>
-            <Link><img src={facebook} alt="" className='social-img' /></Link>
+            <Link to={"https://t.me/mikkarra"}><img src={telegram} alt="" className='social-img' /></Link>
+            <Link to={"https://www.youtube.com/@Titans313"}><img src={youtube} alt="" className='social-img' /></Link>
+            <Link to={"https://www.instagram.com/mikkarra_?igsh=MWtncjc4d3U1YnBmcw%3D%3D&utm_source=qr"}><img src={instagram} alt="" className='social-img' /></Link>
+            <Link to={"https://www.discordapp.com/users/h3nrush"}><img src={discord} alt="" className='social-img' /></Link>
+            <Link to={"https://www.facebook.com/share/155pprnHNp/?mibextid=wwXIfr"}><img src={facebook} alt="" className='social-img' /></Link>
         </div>
         </div>
     </main>

@@ -6,9 +6,6 @@ function About() {
   return (
     <>
     <Header />
-    <main id="about">
-        
-    </main>
     <Footer />
     </>
   )
