@@ -1,0 +1,101 @@
+#contact {
+    background-color: #141414; // Dark background
+    color: #fff; // White text for good contrast
+    padding: 2rem;
+  
+    iframe {
+      border: none;
+      margin-bottom: 2rem;
+      max-height: 400px;
+    }
+  
+    .i-forcontact {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+  
+    .Address {
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  
+    .i-social {
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+  
+    #social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+  
+      .social-img {
+        width: 48px;
+        height: 48px;
+        transition: transform 0.3s;
+  
+        &:hover {
+          transform: scale(1.2);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #contact {
+      padding: 1rem;
+  
+      iframe {
+        max-height: 300px;
+      }
+  
+      .i-forcontact,
+      .Address,
+      .i-social {
+        font-size: 1rem;
+      }
+  .Address{
+    user-select: all;
+  }
+      #social-links {
+        gap: 0.5rem;
+  
+        .social-img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 769px) {
+    #contact {
+      iframe {
+        max-height: 500px;
+      }
+  
+      .i-forcontact,
+      .Address,
+      .i-social {
+        font-size: 1.3rem;
+      }
+      .Address{
+        user-select: all;
+      }
+  
+      #social-links {
+        gap: 1.5rem;
+        padding-bottom: 20px;
+  
+        .social-img {
+          width: 56px;
+          height: 56px;
+        }
+      }
+    }
+  }

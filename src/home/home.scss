@@ -1,0 +1,322 @@
+
+@media (min-width: 600px){
+
+    .main-home{
+        .info{
+            width: 100vw;
+            height: auto;
+            padding: 50px 0 50px 0;
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            justify-content:space-around;
+            flex-wrap: wrap;
+            .myPhoto{
+                .img-myPhoto{
+                    width: 250px;
+                    animation: text-visi 1s  ease-out forwards;
+                    border-radius:50%;
+                    border: 3px #6ace15  solid ;
+                    cursor: pointer;
+                    user-select: none;
+                }
+            }
+    
+            .mine-info{
+                h2,h3,p{
+                    width: 300px;
+                }
+                h2{
+                    color: white;
+                    animation: text-visi 1s ease-out forwards;
+                }
+                h3{
+                    color: rgba(255, 255, 255, 0.575);
+                    animation: text-visi 1s  ease-out forwards;
+                }
+                p{
+                    color: #45880a;
+                    animation: text-visi 1s  ease-out forwards;
+                    margin-bottom: 20px;
+                }
+            }
+    
+            border-bottom: 1px rgba(255, 255, 255, 0.041) solid;
+        }
+    }
+    @keyframes text-visi {
+        from{
+            opacity: 0;
+            transform: scale(0.3);
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    .skills{
+        width: 100vw;
+        padding-bottom: 50px;
+        h1{
+            width: 50%;
+            color: #6ace15;
+            margin: 30px 0 30px 30px;
+            padding-bottom: 5px;
+            text-decoration: underline;
+        }
+        .lang-icons{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 10px 10px;
+            .iconLinks{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.247);
+                margin: 5px;
+                transition: all 0.1s ease-out;
+                img{
+                    width: 7vh;
+                    transition: all 0.1s ease-out;
+                }
+            }
+            .iconLinks:hover{
+                color: white;
+                transform: scale(1.2);
+            }
+        }
+        border-bottom: 1px rgba(255, 255, 255, 0.041) solid;
+    }
+    .examples{
+        .container-of-ex{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .text-of-ex{
+                width:80vw;
+                padding: 10vw;
+                color: white;
+                .string-ts{
+                    color: lightblue;
+                }
+                .string-py{
+                    color: yellow;
+                }
+                .string-react{
+                    color: darkblue;
+                }
+                .string-express{
+                    color: rgb(208, 255, 0);
+                }
+                .string-sass{
+                    color: purple;
+                }
+                .p-ex{
+                    font-size: 0.7em;
+                }
+            }
+            .textEx{
+                width: 70vw;
+                height: 50vh;
+                padding: 5vw;
+                outline: none;
+                border: none;
+                color: #6ace15;
+            }
+            .textEx:focus{
+                border-inline: 1px #6ace15 solid;
+            }
+        }
+        .code-of-ex{
+            border-bottom:1px rgba(255, 255, 255, 0.11) solid;
+        }
+    }
+    .download-mycv{
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        border-radius: 20px;
+        transition: all 0.5s ease-in-out;
+        animation:displayOn 2s ease-in-out infinite ;
+    }
+    .download-mycv:hover{
+        background-color: unset;
+        color: white;
+        color: lightblue;
+    }
+    
+    @keyframes displayOn {
+        0%{background-color: #45880a;}50%{background-color: #6ace15;}100%{background-color: #45880a;}
+    }
+    
+}
+
+
+@media (max-width:600px){
+    .main-home{
+        .info{
+            width: 100vw;
+            height: auto;
+            padding: 50px 0 50px 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content:space-around;
+            flex-wrap: wrap;
+            .myPhoto{
+                .img-myPhoto{
+                    width: 50vw;
+                    animation: text-visi 1s  ease-out forwards;
+                    border-radius:50%;
+                    border: 3px #6ace15  solid ;
+                    cursor: pointer;
+                    user-select: none;
+                }
+            }
+    
+            .mine-info{
+                h2,h3,p{
+                    width: 50vw;
+                    background-color: unset;
+                    padding: 5px 0 5px 0;
+                }
+                h2{
+                    color: white;
+                    animation: text-visi 1s ease-out forwards;
+                    font-size: 5vw;
+                }
+                h3{
+                    color: rgba(255, 255, 255, 0.575);
+                    animation: text-visi 1s  ease-out forwards;
+                    font-size: 3vw;
+                }
+                p{
+                    color: #45880a;
+                    animation: text-visi 1s  ease-out forwards;
+                    margin-bottom: 20px;
+                    font-size: 2vw;
+                }
+            }
+    
+            border-bottom: 1px rgba(255, 255, 255, 0.041) solid;
+        }
+    }
+    @keyframes text-visi {
+        from{
+            opacity: 0;
+            transform: scale(0.3);
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    .skills{
+        width: 100vw;
+        padding-bottom: 50px;
+        h1{
+            width: 50%;
+            color: #6ace15;
+            margin: 30px 0 30px 30px;
+            padding-bottom: 5px;
+            text-decoration: underline;
+            font-size: 6vw;
+        }
+        .lang-icons{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 10px 10px;
+            .iconLinks{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.247);
+                margin: 5px;
+                transition: all 0.1s ease-out;
+                font-size: 3vw;
+                img{
+                    width:50px;
+                    transition: all 0.1s ease-out;
+                }
+            }
+            .iconLinks:hover{
+                color: white;
+                transform: scale(1.2);
+            }
+        }
+        border-bottom: 1px rgba(255, 255, 255, 0.041) solid;
+    }
+    .examples{
+        .container-of-ex{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .text-of-ex{
+                width:80vw;
+                padding: 10vw;
+                color: white;
+                .string-ts{
+                    color: lightblue;
+                }
+                .string-py{
+                    color: yellow;
+                }
+                .string-react{
+                    color: darkblue;
+                }
+                .string-express{
+                    color: rgb(208, 255, 0);
+                }
+                .string-sass{
+                    color: purple;
+                }
+                .p-ex{
+                    font-size: 0.7em;
+                }
+            }
+            .textEx{
+                width: 70vw;
+                height: 50vh;
+                padding: 5vw;
+                outline: none;
+                border: none;
+                color: #6ace15;
+            }
+            .textEx:focus{
+                border-inline: 1px #6ace15 solid;
+            }
+        }
+        .code-of-ex{
+            border-bottom:1px rgba(255, 255, 255, 0.11) solid;
+        }
+    }
+    .download-mycv{
+        text-decoration: none;
+        color: black;
+        font-size: 3vw;
+        padding: 10px;
+        border-radius: 20px;
+        transition: all 0.5s ease-in-out;
+        animation:displayOn 2s ease-in-out infinite ;
+    }
+    .download-mycv:hover{
+        background-color: unset;
+        color: white;
+        color: lightblue;
+    }
+    
+    @keyframes displayOn {
+        0%{background-color: #45880a;}50%{background-color: #6ace15;}100%{background-color: #45880a;}
+    }
+    
+}
