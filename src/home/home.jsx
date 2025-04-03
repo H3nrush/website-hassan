@@ -1,4 +1,4 @@
-import React from 'react'
+
 import "../home/home.scss"
 import Header from '../header/header';
 import Footer from '../footer/footer';
@@ -20,85 +20,20 @@ import up from "../file/icons8-up-48.png"
 import { Link } from 'react-router-dom';
 
 
-const textTs = `
-//warning : dont forget to change the € letters to $ 
-import { TonClient, WalletContractV4, internal, toNano } from "ton";
-import { mnemonicToWalletKey } from "ton-crypto";
-import * as dotenv from "dotenv";
 
-dotenv.config();
+function Home() {
 
-async function main() {
-    const client = new TonClient({ endpoint: "https://toncenter.com/api/v2/jsonRPC" });
-    const mnemonic = process.env.MNEMONIC?.split(" ") || [];
-    const key = await mnemonicToWalletKey(mnemonic);
-    const wallet = WalletContractV4.create({ workchain: 0, publicKey: key.publicKey });
-    const walletContract = client.open(wallet);
-    const seqno = await walletContract.getSeqno();
-    const message = internal({ to: "EQC...", value: toNano("0.01"), bounce: false });
-    const transfer = walletContract.createTransfer({ seqno, secretKey: key.secretKey, messages: [message] });
-    await walletContract.send(transfer);
-}
-
-main();
-
-`;
-
-const textPy = `
-//warning : dont forget to change the € letters to $ 
-import bcrypt
-
-def encrypt_password(password: str) -> str:
-    salt = bcrypt.gensalt()
-    hashed_password = bcrypt.hashpw(password.encode(), salt)
-    return hashed_password.decode()
-
-def verify_password(password: str, hashed_password: str) -> bool:
-    return bcrypt.checkpw(password.encode(), hashed_password.encode())
-
-if __name__ == "__main__":
-    password = input("Enter a password: ")
-    encrypted = encrypt_password(password)
-    print("Encrypted password:", encrypted)
-    
-    # Verify password
-    check = input("Re-enter password to verify: ")
-    if verify_password(check, encrypted):
-        print("Password is correct!")
-    else:
-        print("Incorrect password!")
-
-`;
-
-const textReact = `
-//warning : dont forget to change the € letters to $ 
-import React, { useState } from "react";
-import { TonClient, WalletContractV4, internal, toNano } from "ton";
-import { mnemonicToWalletKey } from "ton-crypto";
-
-const TonWallet = () => {
-  const [balance, setBalance] = useState("Loading...");
-  const [status, setStatus] = useState("");
-
-  const connectWallet = async () => {
-    try {
+  const textTs = `
+  //warning : dont forget to change the € letters to $ 
+  import { TonClient, WalletContractV4, internal, toNano } from "ton";
+  import { mnemonicToWalletKey } from "ton-crypto";
+  import * as dotenv from "dotenv";
+  
+  dotenv.config();
+  
+  async function main() {
       const client = new TonClient({ endpoint: "https://toncenter.com/api/v2/jsonRPC" });
-      const mnemonic = "your mnemonic here".split(" ");
-      const key = await mnemonicToWalletKey(mnemonic);
-      const wallet = WalletContractV4.create({ workchain: 0, publicKey: key.publicKey });
-      const walletContract = client.open(wallet);
-      const balance = await walletContract.getBalance();
-      setBalance(balance.toString());
-    } catch (error) {
-      console.error("Error connecting to wallet:", error);
-      setBalance("Error");
-    }
-  };
-
-  const sendTransaction = async () => {
-    try {
-      const client = new TonClient({ endpoint: "https://toncenter.com/api/v2/jsonRPC" });
-      const mnemonic = "your mnemonic here".split(" ");
+      const mnemonic = process.env.MNEMONIC?.split(" ") || [];
       const key = await mnemonicToWalletKey(mnemonic);
       const wallet = WalletContractV4.create({ workchain: 0, publicKey: key.publicKey });
       const walletContract = client.open(wallet);
@@ -106,120 +41,187 @@ const TonWallet = () => {
       const message = internal({ to: "EQC...", value: toNano("0.01"), bounce: false });
       const transfer = walletContract.createTransfer({ seqno, secretKey: key.secretKey, messages: [message] });
       await walletContract.send(transfer);
-      setStatus("Transaction sent successfully!");
-    } catch (error) {
-      console.error("Transaction error:", error);
-      setStatus("Transaction failed");
-    }
+  }
+  
+  main();
+  
+  `;
+  
+  const textPy = `
+  //warning : dont forget to change the € letters to $ 
+  import bcrypt
+  
+  def encrypt_password(password: str) -> str:
+      salt = bcrypt.gensalt()
+      hashed_password = bcrypt.hashpw(password.encode(), salt)
+      return hashed_password.decode()
+  
+  def verify_password(password: str, hashed_password: str) -> bool:
+      return bcrypt.checkpw(password.encode(), hashed_password.encode())
+  
+  if __name__ == "__main__":
+      password = input("Enter a password: ")
+      encrypted = encrypt_password(password)
+      print("Encrypted password:", encrypted)
+      
+      # Verify password
+      check = input("Re-enter password to verify: ")
+      if verify_password(check, encrypted):
+          print("Password is correct!")
+      else:
+          print("Incorrect password!")
+  
+  `;
+  
+  const textReact = `
+  //warning : dont forget to change the € letters to $ 
+  import React, { useState } from "react";
+  import { TonClient, WalletContractV4, internal, toNano } from "ton";
+  import { mnemonicToWalletKey } from "ton-crypto";
+  
+  const TonWallet = () => {
+    const [balance, setBalance] = useState("Loading...");
+    const [status, setStatus] = useState("");
+  
+    const connectWallet = async () => {
+      try {
+        const client = new TonClient({ endpoint: "https://toncenter.com/api/v2/jsonRPC" });
+        const mnemonic = "your mnemonic here".split(" ");
+        const key = await mnemonicToWalletKey(mnemonic);
+        const wallet = WalletContractV4.create({ workchain: 0, publicKey: key.publicKey });
+        const walletContract = client.open(wallet);
+        const balance = await walletContract.getBalance();
+        setBalance(balance.toString());
+      } catch (error) {
+        console.error("Error connecting to wallet:", error);
+        setBalance("Error");
+      }
+    };
+  
+    const sendTransaction = async () => {
+      try {
+        const client = new TonClient({ endpoint: "https://toncenter.com/api/v2/jsonRPC" });
+        const mnemonic = "your mnemonic here".split(" ");
+        const key = await mnemonicToWalletKey(mnemonic);
+        const wallet = WalletContractV4.create({ workchain: 0, publicKey: key.publicKey });
+        const walletContract = client.open(wallet);
+        const seqno = await walletContract.getSeqno();
+        const message = internal({ to: "EQC...", value: toNano("0.01"), bounce: false });
+        const transfer = walletContract.createTransfer({ seqno, secretKey: key.secretKey, messages: [message] });
+        await walletContract.send(transfer);
+        setStatus("Transaction sent successfully!");
+      } catch (error) {
+        console.error("Transaction error:", error);
+        setStatus("Transaction failed");
+      }
+    };
+  
+    return (
+      <div>
+        <h2>TON Wallet</h2>
+        <p>Balance: {balance}</p>
+        <button onClick={connectWallet}>Connect Wallet</button>
+        <button onClick={sendTransaction}>Send Transaction</button>
+        <p>{status}</p>
+      </div>
+    );
   };
-
-  return (
-    <div>
-      <h2>TON Wallet</h2>
-      <p>Balance: {balance}</p>
-      <button onClick={connectWallet}>Connect Wallet</button>
-      <button onClick={sendTransaction}>Send Transaction</button>
-      <p>{status}</p>
-    </div>
-  );
-};
-
-export default TonWallet;
-
-`
-
-
-const textExpress = `
-//warning : dont forget to change the € letters to $ 
-import express from "express";
-import bcrypt from "bcrypt";
-import bodyParser from "body-parser";
-import mongoose from "mongoose";
-
-const app = express();
-const PORT = 5000;
-
-mongoose.connect("mongodb://localhost:27017/usersDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-const userSchema = new mongoose.Schema({
-  username: String,
-  password: String,
-});
-
-const User = mongoose.model("User", userSchema);
-
-app.use(bodyParser.json());
-
-app.post("/register", async (req, res) => {
-  try {
-    const { username, password } = req.body;
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const newUser = new User({ username, password: hashedPassword });
-    await newUser.save();
-    res.status(201).json({ message: "User created successfully" });
-  } catch (error) {
-    res.status(500).json({ error: "Error creating user" });
-  }
-});
-
-app.listen(PORT, () => {
-  console.log('Server running on port € {PORT}');
-});
-
-`;
-
-
-const textSass = `
-//warning : dont forget to change the € letters to $ 
-€primary-color: #3498db;
-€secondary-color: #2ecc71;
-€font-stack: 'Arial, sans-serif';
-
-body {
-  font-family: €font-stack;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-}
-
-.button {
-  background-color: €primary-color;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-
-  &:hover {
-    background-color: darken(€primary-color, 10%);
-  }
-}
-
-.alert {
-  padding: 15px;
-  background-color: €secondary-color;
-  color: white;
-  border-radius: 5px;
-}
-`;
-
-const returnup =()=> {
   
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  export default TonWallet;
   
-}
+  `
+  
+  
+  const textExpress = `
+  //warning : dont forget to change the € letters to $ 
+  import express from "express";
+  import bcrypt from "bcrypt";
+  import bodyParser from "body-parser";
+  import mongoose from "mongoose";
+  
+  const app = express();
+  const PORT = 5000;
+  
+  mongoose.connect("mongodb://localhost:27017/usersDB", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+  
+  const userSchema = new mongoose.Schema({
+    username: String,
+    password: String,
+  });
+  
+  const User = mongoose.model("User", userSchema);
+  
+  app.use(bodyParser.json());
+  
+  app.post("/register", async (req, res) => {
+    try {
+      const { username, password } = req.body;
+      const hashedPassword = await bcrypt.hash(password, 10);
+      const newUser = new User({ username, password: hashedPassword });
+      await newUser.save();
+      res.status(201).json({ message: "User created successfully" });
+    } catch (error) {
+      res.status(500).json({ error: "Error creating user" });
+    }
+  });
+  
+  app.listen(PORT, () => {
+    console.log('Server running on port € {PORT}');
+  });
+  
+  `;
+  
+  
+  const textSass = `
+  //warning : dont forget to change the € letters to $ 
+  €primary-color: #3498db;
+  €secondary-color: #2ecc71;
+  €font-stack: 'Arial, sans-serif';
+  
+  body {
+    font-family: €font-stack;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .button {
+    background-color: €primary-color;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  
+    &:hover {
+      background-color: darken(€primary-color, 10%);
+    }
+  }
+  
+  .alert {
+    padding: 15px;
+    background-color: €secondary-color;
+    color: white;
+    border-radius: 5px;
+  }
+  `;
+  
+  const returnup =()=> {
+    
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+  }
 
-function Home() {
   return (
     <>
         <Header />

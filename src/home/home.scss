@@ -162,8 +162,10 @@
         right: 0;
         z-index: 99999;
         cursor: pointer;
+        background-color: unset;
         .returnback-img{
             width: 50px;
+            background-color: unset;
         }
     }
 }
@@ -336,11 +338,13 @@
         bottom: 0;
         top: auto;
         left: auto;
-        right: 0;
+        right: calc(50% - 25px);
         z-index: 99999;
+        background-color: unset;
         cursor: pointer;
         .returnback-img{
             width: 25px;
+            background-color: unset;
         }
     }
     
