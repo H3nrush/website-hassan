@@ -34,7 +34,7 @@ function Header() {
     <header id="header">
       <nav className="navbar">
         <div className="logo">
-          <img src={icon} alt="Logo" className="icon" />
+          <Link to={"https://www.hassanmohammadi.site"}><img src={icon} alt="Logo" className="icon" /></Link>
         </div>
 
         {/* Mobile View: Show Menu Icon */}
@@ -73,7 +73,7 @@ function Header() {
             )}
             <Link to="/Contact"><button>Contact</button></Link>
             <Link to="/About"><button>About</button></Link>
-            <Link><img src={github} className="github" alt="GitHub" /></Link>
+            <Link to={"https://www.github.com/h3nrush"}><img src={github} className="github" alt="GitHub" /></Link>
           </div>
         )}
       </nav>

@@ -153,7 +153,19 @@
     @keyframes displayOn {
         0%{background-color: #45880a;}50%{background-color: #6ace15;}100%{background-color: #45880a;}
     }
-    
+    #returnback{
+        width: auto;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: auto;
+        right: 0;
+        z-index: 99999;
+        cursor: pointer;
+        .returnback-img{
+            width: 50px;
+        }
+    }
 }
 
 
@@ -317,6 +329,19 @@
     
     @keyframes displayOn {
         0%{background-color: #45880a;}50%{background-color: #6ace15;}100%{background-color: #45880a;}
+    }
+    #returnback{
+        width: auto;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: auto;
+        right: 0;
+        z-index: 99999;
+        cursor: pointer;
+        .returnback-img{
+            width: 25px;
+        }
     }
     
 }

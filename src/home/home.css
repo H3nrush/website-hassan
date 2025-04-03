@@ -1,0 +1,340 @@
+@media (min-width: 600px) {
+  .main-home .info {
+    width: 100vw;
+    height: auto;
+    padding: 50px 0 50px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-bottom: 1px rgba(255, 255, 255, 0.041) solid;
+  }
+  .main-home .info .myPhoto .img-myPhoto {
+    width: 250px;
+    animation: text-visi 1s ease-out forwards;
+    border-radius: 50%;
+    border: 3px #6ace15 solid;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  .main-home .info .mine-info h2, .main-home .info .mine-info h3, .main-home .info .mine-info p {
+    width: 300px;
+  }
+  .main-home .info .mine-info h2 {
+    color: white;
+    animation: text-visi 1s ease-out forwards;
+  }
+  .main-home .info .mine-info h3 {
+    color: rgba(255, 255, 255, 0.575);
+    animation: text-visi 1s ease-out forwards;
+  }
+  .main-home .info .mine-info p {
+    color: #45880a;
+    animation: text-visi 1s ease-out forwards;
+    margin-bottom: 20px;
+  }
+  @keyframes text-visi {
+    from {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .skills {
+    width: 100vw;
+    padding-bottom: 50px;
+    border-bottom: 1px rgba(255, 255, 255, 0.041) solid;
+  }
+  .skills h1 {
+    width: 50%;
+    color: #6ace15;
+    margin: 30px 0 30px 30px;
+    padding-bottom: 5px;
+    text-decoration: underline;
+  }
+  .skills .lang-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+  }
+  .skills .lang-icons .iconLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.247);
+    margin: 5px;
+    transition: all 0.1s ease-out;
+  }
+  .skills .lang-icons .iconLinks img {
+    width: 7vh;
+    transition: all 0.1s ease-out;
+  }
+  .skills .lang-icons .iconLinks:hover {
+    color: white;
+    transform: scale(1.2);
+  }
+  .examples .container-of-ex {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .examples .container-of-ex .text-of-ex {
+    width: 80vw;
+    padding: 10vw;
+    color: white;
+  }
+  .examples .container-of-ex .text-of-ex .string-ts {
+    color: lightblue;
+  }
+  .examples .container-of-ex .text-of-ex .string-py {
+    color: yellow;
+  }
+  .examples .container-of-ex .text-of-ex .string-react {
+    color: darkblue;
+  }
+  .examples .container-of-ex .text-of-ex .string-express {
+    color: rgb(208, 255, 0);
+  }
+  .examples .container-of-ex .text-of-ex .string-sass {
+    color: purple;
+  }
+  .examples .container-of-ex .text-of-ex .p-ex {
+    font-size: 0.7em;
+  }
+  .examples .container-of-ex .textEx {
+    width: 70vw;
+    height: 50vh;
+    padding: 5vw;
+    outline: none;
+    border: none;
+    color: #6ace15;
+  }
+  .examples .container-of-ex .textEx:focus {
+    border-inline: 1px #6ace15 solid;
+  }
+  .examples .code-of-ex {
+    border-bottom: 1px rgba(255, 255, 255, 0.11) solid;
+  }
+  .download-mycv {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+    animation: displayOn 2s ease-in-out infinite;
+  }
+  .download-mycv:hover {
+    background-color: unset;
+    color: white;
+    color: lightblue;
+  }
+  @keyframes displayOn {
+    0% {
+      background-color: #45880a;
+    }
+    50% {
+      background-color: #6ace15;
+    }
+    100% {
+      background-color: #45880a;
+    }
+  }
+  #returnback {
+    width: auto;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    left: auto;
+    right: 0;
+    z-index: 99999;
+    cursor: pointer;
+  }
+  #returnback .returnback-img {
+    width: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .main-home .info {
+    width: 100vw;
+    height: auto;
+    padding: 50px 0 50px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-bottom: 1px rgba(255, 255, 255, 0.041) solid;
+  }
+  .main-home .info .myPhoto .img-myPhoto {
+    width: 50vw;
+    animation: text-visi 1s ease-out forwards;
+    border-radius: 50%;
+    border: 3px #6ace15 solid;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  .main-home .info .mine-info h2, .main-home .info .mine-info h3, .main-home .info .mine-info p {
+    width: 50vw;
+    background-color: unset;
+    padding: 5px 0 5px 0;
+  }
+  .main-home .info .mine-info h2 {
+    color: white;
+    animation: text-visi 1s ease-out forwards;
+    font-size: 5vw;
+  }
+  .main-home .info .mine-info h3 {
+    color: rgba(255, 255, 255, 0.575);
+    animation: text-visi 1s ease-out forwards;
+    font-size: 3vw;
+  }
+  .main-home .info .mine-info p {
+    color: #45880a;
+    animation: text-visi 1s ease-out forwards;
+    margin-bottom: 20px;
+    font-size: 2vw;
+  }
+  @keyframes text-visi {
+    from {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .skills {
+    width: 100vw;
+    padding-bottom: 50px;
+    border-bottom: 1px rgba(255, 255, 255, 0.041) solid;
+  }
+  .skills h1 {
+    width: 50%;
+    color: #6ace15;
+    margin: 30px 0 30px 30px;
+    padding-bottom: 5px;
+    text-decoration: underline;
+    font-size: 6vw;
+  }
+  .skills .lang-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+  }
+  .skills .lang-icons .iconLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.247);
+    margin: 5px;
+    transition: all 0.1s ease-out;
+    font-size: 3vw;
+  }
+  .skills .lang-icons .iconLinks img {
+    width: 50px;
+    transition: all 0.1s ease-out;
+  }
+  .skills .lang-icons .iconLinks:hover {
+    color: white;
+    transform: scale(1.2);
+  }
+  .examples .container-of-ex {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .examples .container-of-ex .text-of-ex {
+    width: 80vw;
+    padding: 10vw;
+    color: white;
+  }
+  .examples .container-of-ex .text-of-ex .string-ts {
+    color: lightblue;
+  }
+  .examples .container-of-ex .text-of-ex .string-py {
+    color: yellow;
+  }
+  .examples .container-of-ex .text-of-ex .string-react {
+    color: darkblue;
+  }
+  .examples .container-of-ex .text-of-ex .string-express {
+    color: rgb(208, 255, 0);
+  }
+  .examples .container-of-ex .text-of-ex .string-sass {
+    color: purple;
+  }
+  .examples .container-of-ex .text-of-ex .p-ex {
+    font-size: 0.7em;
+  }
+  .examples .container-of-ex .textEx {
+    width: 70vw;
+    height: 50vh;
+    padding: 5vw;
+    outline: none;
+    border: none;
+    color: #6ace15;
+  }
+  .examples .container-of-ex .textEx:focus {
+    border-inline: 1px #6ace15 solid;
+  }
+  .examples .code-of-ex {
+    border-bottom: 1px rgba(255, 255, 255, 0.11) solid;
+  }
+  .download-mycv {
+    text-decoration: none;
+    color: black;
+    font-size: 3vw;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+    animation: displayOn 2s ease-in-out infinite;
+  }
+  .download-mycv:hover {
+    background-color: unset;
+    color: white;
+    color: lightblue;
+  }
+  @keyframes displayOn {
+    0% {
+      background-color: #45880a;
+    }
+    50% {
+      background-color: #6ace15;
+    }
+    100% {
+      background-color: #45880a;
+    }
+  }
+  #returnback {
+    width: auto;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    left: auto;
+    right: 0;
+    z-index: 99999;
+    cursor: pointer;
+  }
+  #returnback .returnback-img {
+    width: 25px;
+  }
+}/*# sourceMappingURL=home.css.map */

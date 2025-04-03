@@ -14,6 +14,7 @@ import mysql from "../file/icons8-mysql-96.png"
 import nextjs from "../file/icons8-nextjs-96.png"
 import python from "../file/icons8-python-96.png"
 import ts from "../file/icons8-typescript-96.png"
+import up from "../file/icons8-up-48.png"
 
 
 import { Link } from 'react-router-dom';
@@ -212,6 +213,12 @@ body {
 }
 `;
 
+const returnup =()=> {
+  
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  
+}
+
 function Home() {
   return (
     <>
@@ -330,6 +337,7 @@ function Home() {
                     <div className='code-of-ex'>
                         <textarea readOnly value={textPy} className='textEx'></textarea>
                     </div>
+                    
                 </div>
                 <div className="container-of-ex">
                     <div className="text-of-ex" id='react'>
@@ -520,6 +528,9 @@ function Home() {
                     <Link className='iconLinks'><img src={adbxd} alt={"Adobe Xd"} />Adobe Xd</Link>
                 </div>
             </section>
+            <div id='returnback'>
+                <img src={up} alt="up" className='returnback-img' onClick={returnup}/>
+            </div>
         </main>
         <Footer />
         
