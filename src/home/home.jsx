@@ -517,17 +517,17 @@ function Home() {
             <section className="skills">
                 <h1>My Skills:</h1>
                 <div className="lang-icons">
-                    <Link className='iconLinks'><img src={sass} alt={"Sass"} />Sass</Link>
-                    <Link className='iconLinks'><img src={html} alt={"HTML"} />HTML</Link>
-                    <Link className='iconLinks'><img src={js} alt={"Js"} />JavaScript</Link>
-                    <Link className='iconLinks'><img src={ts} alt={"Ts"} />TypeScript</Link>
-                    <Link className='iconLinks'><img src={react} alt={"React"} />React</Link>
-                    <Link className='iconLinks'><img src={nodejs} alt={"Node JS"} />Node Js</Link>
-                    <Link className='iconLinks'><img src={ex} alt={"Express JS"} />Express Js</Link>
-                    <Link className='iconLinks'><img src={nextjs} alt={"Next JS"} />Next Js</Link>
-                    <Link className='iconLinks'><img src={python} alt={"Python"} />Python</Link>
-                    <Link className='iconLinks'><img src={mysql} alt={"MySQL"} />MySQL</Link>
-                    <Link className='iconLinks'><img src={adbxd} alt={"Adobe Xd"} />Adobe Xd</Link>
+                    <Link to={"https://en.wikipedia.org/wiki/Sass_(style_sheet_language)"} className='iconLinks'><img src={sass} alt={"Sass"} />Sass</Link>
+                    <Link to={"https://en.wikipedia.org/wiki/HTML"} className='iconLinks'><img src={html} alt={"HTML"} />HTML</Link>
+                    <Link to={"https://en.wikipedia.org/wiki/JavaScript"} className='iconLinks'><img src={js} alt={"Js"} />JavaScript</Link>
+                    <Link to={"https://en.wikipedia.org/wiki/TypeScript"}  className='iconLinks'><img src={ts} alt={"Ts"} />TypeScript</Link>
+                    <Link to={"https://en.wikipedia.org/wiki/React_(software)"}  className='iconLinks'><img src={react} alt={"React"} />React</Link>
+                    <Link to={"https://en.wikipedia.org/wiki/Node.js"} className='iconLinks'><img src={nodejs} alt={"Node JS"} />Node Js</Link>
+                    <Link to={"https://en.wikipedia.org/wiki/Express.js"} className='iconLinks'><img src={ex} alt={"Express JS"} />Express Js</Link>
+                    <Link to={"https://en.wikipedia.org/wiki/Next.js"} className='iconLinks'><img src={nextjs} alt={"Next JS"} />Next Js</Link>
+                    <Link to={"https://en.wikipedia.org/wiki/Python_(programming_language)"} className='iconLinks'><img src={python} alt={"Python"} />Python</Link>
+                    <Link to={"https://en.wikipedia.org/wiki/MySQL"} className='iconLinks'><img src={mysql} alt={"MySQL"} />MySQL</Link>
+                    <Link to={"https://en.wikipedia.org/wiki/Adobe_XD"} className='iconLinks'><img src={adbxd} alt={"Adobe Xd"} />Adobe Xd</Link>
                 </div>
             </section>
             <div id='returnback'>
